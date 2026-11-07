@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #0E0D12;
+    --bg-glass: rgba(22, 22, 28, 0.75);
+    --bg-glass-elevated: rgba(28, 27, 36, 0.85);
+    --bg-surface-neutral: #1B1A22;
+    --border-hairline: rgba(255, 255, 255, 0.07);
+    --accent-peach: #FB9278;
+    --accent-blush: #FCA5A5;
+    --accent-amber: #F59E0B;
+    --accent-mint: #6EE7B7;
+    --accent-sc: #F97316;
+    --text-primary: #F8FAFC;
+    --text-secondary: #948F9E;
+    --text-dimmed: #6B6775;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Velvet Glass Utilities */
+.velvet-glass {
+  background: rgba(22, 22, 28, 0.75);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.velvet-glass-subtle {
+  background: rgba(27, 26, 34, 0.65);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.peach-glow {
+  box-shadow: 0 0 20px rgba(251, 146, 120, 0.25);
+}
+
+.peach-glow-strong {
+  box-shadow: 0 0 28px rgba(251, 146, 120, 0.42);
+}
+
+/* Custom Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 143, 158, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 146, 120, 0.45);
+}
+
+/* Range Input Reset for Scrubber & Equalizer */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #F8FAFC;
+  border: 2px solid #FB9278;
+  box-shadow: 0 0 10px rgba(251, 146, 120, 0.5);
+  transition: transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}

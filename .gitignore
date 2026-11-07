@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Production / Build
+dist
+dist-electron
+build
+out
+*.tsbuildinfo
+
+# Environment & Local Config
+.env
+.env.local
+.env.*.local
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Local Storage / Binary caches (Isolated in drive E:)
+riff-data/
+tracks/
+cache/
+bin/
+*.exe
+*.figcraft
+
+# Internal Agent & Handover Documentation
+BACKEND_HANDOVER.md
+BACKEND_TECHNICAL_SPEC.md
+COLLABORATION_PROTOCOL.md
+PROJECT_SYNC.md
+*-notes/
